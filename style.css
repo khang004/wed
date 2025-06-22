@@ -60,3 +60,40 @@ h1 {
     width: 15%;
 }
 
+/* code màn hình nhỏ */
+@media (max-width: 600px) {
+    .montserrat {
+        font-size: 24px;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 16px;
+        margin: 10px;
+        text-align: left;
+    }
+
+    .image-container {
+        width: 90%;
+        flex-direction: column;
+        height: auto;
+        margin: 20px auto;
+    }
+
+    .image-container img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .image-container .info {
+        font-size: 20px;
+        width: 100%;
+    }
+
+    .logo {
+        width: 40%;
+        margin: 20px auto;
+        display: block;
+    }
+}
