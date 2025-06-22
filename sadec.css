@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    top: 0;
+    box-sizing: border-box;
+}
+
+header {
+    color: red;
+    font-size: 50px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+p {
+    font-size: 30px;
+    color: rgb(0, 255, 21);
+    background: rgba(0, 0, 0, 0.4);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(https://thamhiemmekong.com/wp-content/uploads/2019/12/lang-hoa-sa-dec-4.jpg);
+    background-repeat: no-repeat;
+}
+
+.container {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 3s ease;
+    text-align: center;
+}
+
+.container.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.img {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 3s ease;
+    margin-top: 30px;
+    margin-left: 20px;
+}
+
+.img.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.im {
+margin-left: 75%;
+  line-height: 200px;
+  font-weight: bold;
+  border-radius: 10px;
+}
