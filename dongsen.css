@@ -1,5 +1,110 @@
 * {
     margin: 0;
-    top: 0;
+    padding: 0;
     box-sizing: border-box;
+}
+body{
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    background-repeat: no-repeat;
+    background-image: url(https://thamhiemmekong.com/wp-content/uploads/2019/12/dong-sen-thap-muoi4.jpg);
+}
+header {
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    color: #04fc04;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+p {
+    font-size: 22px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    text-align: justify;
+    line-height: 1.6;
+    color: #e0ffe0;
+    border-radius: 10px;
+    margin: 20px;
+}
+.container {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1.5s ease;
+    text-align: center;
+}
+.container.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 30px;
+}
+
+.image-row .img {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1.5s ease;
+}
+
+.image-row .img.show {
+    opacity: 0.85;
+    transform: translateY(0);
+}
+
+.image-row .img img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s;
+}
+
+.image-row .img img:hover {
+    transform: scale(1.05);
+}
+/* Nút cuộn lên đầu */
+#topBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    padding: 10px 15px;
+    font-size: 20px;
+    background-color: #12f325;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 999;
+}
+
+#topBtn:hover {
+    background-color: #e67e22;
+}
+
+/* Responsive cho màn hình nhỏ */
+@media (max-width: 600px) {
+    header {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 18px;
+        margin: 10px;
+    }
+
+    .image-row .img img {
+        width: 90vw;
+        height: auto;
+    }
 }
