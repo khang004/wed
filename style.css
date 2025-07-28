@@ -5,14 +5,34 @@
 
 }
 
-body {
-    background: linear-gradient(to right, #74ebd5, #acb6e5);
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.background-clip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Đưa video xuống dưới */
+}
+
+.content-overlay {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    color: rgb(0, 250, 83); /* Màu chữ nổi bật hơn trên video */
 }
 
 .montserrat {
     text-align: center;
     font-size: 50px;
-    color: blue;
+    color: rgb(13, 255, 17);
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 500;
     font-style: normal;
@@ -21,7 +41,7 @@ body {
 h1 {
     margin-left: 20px;
     font-size: 30px;
-    color: chocolate;
+    color: rgb(23, 219, 233);
     margin-top: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
