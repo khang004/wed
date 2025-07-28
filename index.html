@@ -19,7 +19,7 @@
         <video autoplay loop muted plays-inline class="background-clip">
             <source src="video/video.mp4" type="video/mp4">
         </video>
-        <audio id="auto-media" autoplay loop>
+        <audio controls autoplay loop>
             <source src="media/audio.mp3" type="audio/mp3">
         </audio>
         <div class="montserrat"><i class="fa-solid fa-earth-europe fa-spin-pulse" style="color: #ff0000;"></i>GIỚI THIỆU
@@ -73,14 +73,4 @@
             </div>
         </div>
     </div>
-     <script>
-        window.addEventListener('click', function () {
-            const audio = document.getElementById('auto-media');
-            if (audio.paused) {
-                audio.play();
-            }
-        });
-    </script>
-</body>
-
 </html>
