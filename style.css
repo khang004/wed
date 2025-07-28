@@ -2,7 +2,7 @@
     margin: 0;
     top: 0;
     box-sizing: border-box;
-    
+
 }
 
 body {
@@ -26,38 +26,31 @@ h1 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.image-container {
-    position: relative;
-    width: 50%;
+.image-row {
     display: flex;
-    height: 350px;
-    margin-left: 10%;
-    margin-top: 50px;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.image-container .info {
-    position: absolute;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    color: #44ff15;
-    width: 65vw;
-    text-align: center;
-    padding: 5px;
-    opacity: 0;
-    transition: 0.5s;
-    font-size: 40px;
-    
-}
-
-.image-container:hover .info {
-    opacity: 2;
-}
-
-.logo {
-    margin-left: 80%;
-    display: flex;
+.image-row .img img {
+    width: 100%;
+    height: 300px;
+    border-radius: 40px;
+    object-fit: cover;
     position: relative;
-    width: 15%;
+    animation: mymove 5s infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes mymove {
+    from {
+        left: 0px;
+    }
+
+    to {
+        left: 30vw;
+    }
 }
 
 /* code màn hình nhỏ */
@@ -73,27 +66,21 @@ h1 {
         text-align: left;
     }
 
-    .image-container {
+    .image-row {
         width: 90%;
         flex-direction: column;
         height: auto;
-        margin: 20px auto;
+        margin: 10px;
     }
 
-    .image-container img {
+    .image-row img {
         width: 100%;
         height: auto;
         margin-bottom: 10px;
     }
 
-    .image-container .info {
+    .image-row .info {
         font-size: 20px;
         width: 100%;
-    }
-
-    .logo {
-        width: 40%;
-        margin: 20px auto;
-        display: block;
     }
 }
